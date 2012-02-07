@@ -1,0 +1,4 @@
+auftrag:
+    resource: "@IbrowsTaskBundle/Controller/TaskController.php"
+    type:     annotation
+    prefix:   /
