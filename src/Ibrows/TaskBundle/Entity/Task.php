@@ -72,6 +72,11 @@ class Task {
         return $this;
     }
     
+    public function removeTag(Tag $tag) {
+        $this->tags->removeElement($tag);
+        return $this;
+    }
+    
     public function __toString() {
         return $this->getDescription();
     }
