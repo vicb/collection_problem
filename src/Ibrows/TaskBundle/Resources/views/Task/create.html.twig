@@ -1,7 +1,7 @@
 <script type="text/javascript" src="/bundles/ibrowstask/js/jquery-1.6.2.min.js"></script>
 <h1>Test</h1>
 <form action="{{ path('task_create') }}" method="post" {{ form_enctype(form) }}>
-
+        
 {{ form_row(form.description) }}
 
 <h3>Tags</h3>
@@ -20,7 +20,7 @@
 function addTagForm() {
     var collectionHolder = $('#task_tags');
     var prototype = collectionHolder.attr('data-prototype');
-    form = prototype.replace(/__name__/g, collectionHolder.children().length);
+    form = prototype.replace(/\$\$name\$\$/g, collectionHolder.children().length-1);
     collectionHolder.append(form);
 }
 $('a.add_tag_link').click(function(event){

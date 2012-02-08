@@ -22,7 +22,6 @@ class TaskType extends AbstractType
     {
         return array(
             'data_class' => 'Ibrows\TaskBundle\Entity\Task',
-            'cascade_validation' => true,
         );
     }
 

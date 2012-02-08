@@ -59,15 +59,16 @@ class Task {
     public function setTags(\Doctrine\Common\Collections\Collection $tags) {
         foreach($tags as $tag) {
             if($tag instanceof Tag) {
-                $this->addTag($tag);
+                $tag->setTask($this);
             }
         }
+        $this->tags = $tags;
         return $this;
     }
 
     public function addTag(Tag $tag) {
-        $this->tags[] = $tag;
         $tag->setTask($this);
+        $this->tags[] = $tag;
         return $this;
     }
     

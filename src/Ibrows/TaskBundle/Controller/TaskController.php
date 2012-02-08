@@ -26,11 +26,14 @@ class TaskController extends Controller {
             $form->bindRequest($this->getRequest());
             if($form->isValid()) {
                 $em->persist($task);
+                $task->setTags($task->getTags());
                 foreach($task->getTags() as $tag) {
                     $em->persist($tag);
                 }
 
                 $em->flush();
+            } else {
+                var_dump($form->getErrors());
             }
         }
         
@@ -52,6 +55,7 @@ class TaskController extends Controller {
             $form->bindRequest($this->getRequest());
             var_dump(count($task->getTags()));
             if($form->isValid()) {
+                $task->setTags($task->getTags());
                 $em->persist($task);
                 foreach($task->getTags() as $tag) {
                     $em->persist($tag);
@@ -60,6 +64,8 @@ class TaskController extends Controller {
                 $em->flush();
                 
 //                return $this->redirect($this->generateUrl('task_create'));
+            } else {
+                var_dump($form->getErrors());
             }
         }
         
