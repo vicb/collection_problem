@@ -20,7 +20,7 @@
 function addTagForm() {
     var collectionHolder = $('#task_tags');
     var prototype = collectionHolder.attr('data-prototype');
-    form = prototype.replace(/\$\$name\$\$/g, collectionHolder.children().length-1);
+    form = prototype.replace(/__name__/g, collectionHolder.children().length-1);
     collectionHolder.append(form);
 }
 $('a.add_tag_link').click(function(event){

@@ -1,6 +1,6 @@
 [symfony]
     git=http://github.com/symfony/symfony.git
-    version=42dbdd9f3d3750861ddeadd15ccc46d915fc45b9
+    version=1c3e6c2cb2dd6fa93a9507b25340884385218ef8
 
 [twig]
     git=http://github.com/fabpot/Twig.git
