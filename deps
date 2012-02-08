@@ -15,7 +15,7 @@
 
 [doctrine-dbal]
     git=https://github.com/doctrine/dbal.git
-    version=a62df7387b2132195ea43b528ed1e5fe2a5c7210
+    version=origin/master
 
 [doctrine]
     git=http://github.com/doctrine/doctrine2.git
