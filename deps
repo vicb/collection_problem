@@ -1,6 +1,6 @@
 [symfony]
     git=http://github.com/symfony/symfony.git
-    version=937583dda0e621d61d2d4badd2724d67c6f059e6
+    version=42dbdd9f3d3750861ddeadd15ccc46d915fc45b9
 
 [twig]
     git=http://github.com/fabpot/Twig.git
@@ -12,15 +12,13 @@
 
 [doctrine-common]
     git=http://github.com/doctrine/common.git
-    version=38c854c37d20b1f67c979772089b2cd30908bcb6
 
 [doctrine-dbal]
     git=https://github.com/doctrine/dbal.git
-    version=2a9e9943f33610bfde4637abeafe00edd201803c
+    version=a62df7387b2132195ea43b528ed1e5fe2a5c7210
 
 [doctrine]
     git=http://github.com/doctrine/doctrine2.git
-    version=c1012f79706491e9dbf6c8741225b62833c6d2ce
 
 [swiftmailer]
     git=http://github.com/swiftmailer/swiftmailer.git
@@ -72,7 +70,6 @@
 [DoctrineBundle]
     git=http://github.com/doctrine/DoctrineBundle.git
     target=/bundles/Doctrine/Bundle/DoctrineBundle
-    version=d6c923eec875d3bd622c7037b3ff879f4fdafdc8
 
 [DoctrineMigrationsBundle]
     git=http://github.com/doctrine/DoctrineMigrationsBundle.git
