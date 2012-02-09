@@ -4,6 +4,9 @@ namespace Ibrows\TaskBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Constraints\Collection\Optional;
+use Symfony\Component\Validator\Constraints\Collection\Required;
 
 /**
  * @ORM\Entity(repositoryClass="Ibrows\TaskBundle\Repository\TaskRepository")
@@ -27,6 +30,9 @@ class Task {
      * @var \Doctrine\Common\Collections\ArrayCollection $tags
      * 
      * @ORM\OneToMany(targetEntity="Tag", mappedBy="task")
+     * @Assert\Collection({
+     *      "name" = @Required()
+     *  })
      */
     protected $tags;
 
@@ -56,15 +62,15 @@ class Task {
         return $this->tags;
     }
 
-    public function setTags(\Doctrine\Common\Collections\Collection $tags) {
-        foreach($tags as $tag) {
-            if($tag instanceof Tag) {
-                $tag->setTask($this);
-            }
-        }
-        $this->tags = $tags;
-        return $this;
-    }
+//    public function setTags(\Doctrine\Common\Collections\Collection $tags) {
+//        foreach($tags as $tag) {
+//            if($tag instanceof Tag) {
+//                $tag->setTask($this);
+//            }
+//        }
+//        $this->tags = $tags;
+//        return $this;
+//    }
 
     public function addTag(Tag $tag) {
         $tag->setTask($this);

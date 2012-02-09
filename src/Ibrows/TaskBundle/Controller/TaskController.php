@@ -26,7 +26,6 @@ class TaskController extends Controller {
             $form->bindRequest($this->getRequest());
             if($form->isValid()) {
                 $em->persist($task);
-                $task->setTags($task->getTags());
                 foreach($task->getTags() as $tag) {
                     $em->persist($tag);
                 }
